@@ -56,10 +56,18 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" Needed for commenting plugin
+filetype plugin on
+
+" Commenting Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
 Plug 'preservim/nerdtree'
-Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
