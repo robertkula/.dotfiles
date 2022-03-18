@@ -82,6 +82,7 @@ Plug 'junegunn/vim-plug'
 Plug 'preservim/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
