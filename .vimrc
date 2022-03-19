@@ -37,6 +37,7 @@ colorscheme onedark
 syntax on
 
 set ic is
+set scs
 set hlsearch
 set so=10
 
