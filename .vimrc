@@ -80,6 +80,8 @@ filetype plugin on
 " Commenting Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
+filetype plugin on
+
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
