@@ -41,7 +41,19 @@ set scs
 set hlsearch
 set so=10
 
+let mapleader = ","
+
 map <C-n> :NERDTreeToggle<CR>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Turn off default mappings
+let g:NERDCreateDefaultMappings = 0
+
+" Map toggle comment
+nmap <leader>cc <plug>NERDCommenterInvert 
+xmap <leader>cc <plug>NERDCommenterInvert
 
 " Set the cursor for insert mode vs normal mode
 " https://stackoverflow.com/questions/6488683/how-do-i-change-the-cursor-between-normal-and-insert-modes-in-vim
@@ -75,11 +87,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 " Needed for commenting plugin
-filetype plugin on
-
-" Commenting Create default mappings
-let g:NERDCreateDefaultMappings = 1
-
 filetype plugin on
 
 call plug#begin('~/.vim/plugged')
