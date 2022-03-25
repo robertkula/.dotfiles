@@ -55,6 +55,9 @@ let g:NERDCreateDefaultMappings = 0
 nmap <leader>cc <plug>NERDCommenterToggle 
 xmap <leader>cc <plug>NERDCommenterToggle
 
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 " Set the cursor for insert mode vs normal mode
 " https://stackoverflow.com/questions/6488683/how-do-i-change-the-cursor-between-normal-and-insert-modes-in-vim
 let &t_SI = "\e[5 q"
@@ -102,4 +105,5 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
