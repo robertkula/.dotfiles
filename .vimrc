@@ -52,8 +52,8 @@ let g:NERDSpaceDelims = 1
 let g:NERDCreateDefaultMappings = 0
 
 " Map toggle comment
-nmap <leader>cc <plug>NERDCommenterInvert 
-xmap <leader>cc <plug>NERDCommenterInvert
+nmap <leader>cc <plug>NERDCommenterToggle 
+xmap <leader>cc <plug>NERDCommenterToggle
 
 " Set the cursor for insert mode vs normal mode
 " https://stackoverflow.com/questions/6488683/how-do-i-change-the-cursor-between-normal-and-insert-modes-in-vim
