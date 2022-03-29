@@ -41,6 +41,13 @@ set scs
 set hlsearch
 set so=10
 
+" set tabstop=4
+set shiftwidth=4
+set expandtab
+
+let g:goyo_height = 100
+let g:goyo_width = 80
+
 let mapleader = ","
 
 map <C-n> :NERDTreeToggle<CR>
@@ -55,8 +62,18 @@ let g:NERDCreateDefaultMappings = 0
 nmap <leader>cc <plug>NERDCommenterToggle 
 xmap <leader>cc <plug>NERDCommenterToggle
 
+" Format selected code
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Set the cursor for insert mode vs normal mode
 " https://stackoverflow.com/questions/6488683/how-do-i-change-the-cursor-between-normal-and-insert-modes-in-vim
@@ -91,6 +108,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Needed for commenting plugin
 filetype plugin on
+" Todo check out how to open window for preview
 
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -98,6 +116,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
+Plug 'junegunn/goyo.vim'
 Plug 'preservim/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
