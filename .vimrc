@@ -48,8 +48,11 @@ set so=10
 set shiftwidth=4
 set expandtab
 
-let g:goyo_height = 100
-let g:goyo_width = 80
+" TODO set up some shortcut for bwipeout
+
+" let g:goyo_height = "90%"
+let g:goyo_height = 80
+let g:goyo_width = 100
 
 let mapleader = ","
 
