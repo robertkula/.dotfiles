@@ -46,3 +46,6 @@ alias sourcev="source ~/.vimrc"
 alias vim="nvim"
 alias dotfiles="cd ~/.dotfiles"
 alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias projects="~/projects"
+
+source ~/local/zshrc
