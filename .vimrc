@@ -56,7 +56,9 @@ let g:goyo_width = 100
 
 let mapleader = ","
 
+" NERDTree Mappings
 map <C-n> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeFind<CR>
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
