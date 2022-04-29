@@ -1,23 +1,3 @@
-" Not using this, using color override below to set black. Can set this, but
-" powerline bg won't pick it up.
-" onedark.vim override: Don't set a background color when running in a terminal;
-" just use the terminal's background color
-" `gui` is the hex color code used in GUI mode/nvim true-color mode
-" `cterm` is the color code used in 256-color mode
-" `cterm16` is the color code used in 16-color mode
-if (has("autocmd") && !has("gui_running"))
-  augroup colorset
-    autocmd!
-    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    "autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
-  augroup END
-endif
-
-" \ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" }
-" let g:onedark_color_overrides = {
-" \ "black": {"gui": "#282C34", "cterm": "0", "cterm16": "0" }
-" \}
-
 colorscheme onedark
 syntax on
 
@@ -26,13 +6,11 @@ set scs
 set hlsearch
 set so=10
 
-" set tabstop=4
 set shiftwidth=4
 set expandtab
 
 " TODO set up some shortcut for bwipeout
 
-" let g:goyo_height = "90%"
 let g:goyo_height = 80
 let g:goyo_width = 100
 
@@ -98,10 +76,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Needed for commenting plugin
 filetype plugin on
-" Todo check out how to open window for preview
 
 call plug#begin('~/.vim/plugged')
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
