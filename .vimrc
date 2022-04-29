@@ -1,48 +1,37 @@
 colorscheme onedark
 syntax on
+filetype plugin on
 
 set ic is
 set scs
 set hlsearch
 set so=10
-
 set shiftwidth=4
 set expandtab
-
-" TODO set up some shortcut for bwipeout
-
-let g:goyo_height = 80
-let g:goyo_width = 100
-
 let mapleader = ","
 
-" NERDTree Mappings
-map <C-n> :NERDTreeToggle<CR>
-nmap <leader>n :NERDTreeFind<CR>
+nmap <leader>b :bwipeout<CR>
 
-" Add spaces after comment delimiters by default
+
+" ----------- Plugin Configuration ---------------
+let g:goyo_height = 80
+let g:goyo_width = 100
 let g:NERDSpaceDelims = 1
-
-" Turn off default mappings
 let g:NERDCreateDefaultMappings = 0
 
-" Map toggle comment
-nmap <leader>cc <plug>NERDCommenterToggle 
+map <C-n> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeFind<CR>
 xmap <leader>cc <plug>NERDCommenterToggle
-
-" Format selected code
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-
-" Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
-
-" GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+
+" ------------Vim Cursor Display ------------------
 " Set the cursor for insert mode vs normal mode
 " https://stackoverflow.com/questions/6488683/how-do-i-change-the-cursor-between-normal-and-insert-modes-in-vim
 let &t_SI = "\e[5 q"
@@ -62,7 +51,6 @@ augroup END
 " Ps = 5  -> blinking bar (xterm).
 " Ps = 6  -> steady bar (xterm).
 
-
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -73,9 +61,6 @@ endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
-
-" Needed for commenting plugin
-filetype plugin on
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
