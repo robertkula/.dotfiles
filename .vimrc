@@ -23,6 +23,7 @@ let g:NERDCreateDefaultMappings = 0
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 nmap <leader>cc <Plug>NERDCommenterToggle
+vmap <leader>cc <Plug>NERDCommenterToggle
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>rn <Plug>(coc-rename)
