@@ -8,6 +8,7 @@ set hlsearch
 set so=10
 set shiftwidth=4
 set expandtab
+set cursorline
 let mapleader = ","
 
 nmap <leader>b :bwipeout<CR>
