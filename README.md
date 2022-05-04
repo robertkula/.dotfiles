@@ -1,8 +1,6 @@
-Configuration files for common applications. This files are used to keep configuration the same across different machines.
+Configuration files for common applications.
 
-Files must be linked to their destinations for the applications.
+Files must be linked to their config locations.
 
 For example,
 `ln -s ~/.dotfiles/.vimrc ~/.vimrc`
-
-Would like to adding a mapping file for locations, but plenty of other methods available.
